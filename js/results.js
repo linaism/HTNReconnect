@@ -3,8 +3,15 @@ const queryString = window.location.search;
 const urlParams = new URLSearchParams(queryString);
 
 //universal variables
-const numParticipants = urlParams.get("participants");
+const numParticipants = parseInt(urlParams.get("participants"));
+
 const ageRange = urlParams.get("age_range");
+const ageRangeList = ageRange.match(/\d+/g);
+
+const minAge = parseInt(ageRangeList[0]);
+const maxAge = parseInt(ageRangeList[1]);
+
+// const minAge = parseInt(ageRange[])
 
 // category checks
 const wantsGames = urlParams.has("games");
@@ -14,7 +21,12 @@ const wantsMovTv = urlParams.has("mov-tv");
 
 //game variables
 const gameGenres = urlParams.getAll("game-genres");
+
 const costRange = urlParams.get("cost_range");
+const costRangeList = costRange.match(/\d+/g);
+
+const minCost = parseInt(costRangeList[0]);
+const maxCost = parseInt(costRangeList[1]);
 
 //exercises variables
 const exerTypes = urlParams.getAll("exer-types");
@@ -24,5 +36,3 @@ const mealTypes = urlParams.getAll("meal-types");
 
 //mov-tv variables
 const movTvGenres = urlParams.getAll("mov-tv-genres");
-
-// console.log(queryString);
