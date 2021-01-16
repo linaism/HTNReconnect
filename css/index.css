@@ -55,7 +55,7 @@ body {
   display: flex;
   flex-direction: column;
   align-items: center;
-  margin-top: 10rem;
+  margin-top: 6rem;
   /* text-align: center; */
 }
 
@@ -71,7 +71,11 @@ body {
   width: 30vw;
   padding: 1em 0.8em;
   margin: 1em;
-  /* height: 3em; */
+  height: 150px;
+}
+
+.form-card h5 {
+  font-size: 2rem;
 }
 
 .form-card > p {
@@ -84,6 +88,16 @@ select {
   background: rgb(226, 225, 225);
   border-radius: 0.4em;
   min-width: 10vw;
+}
+
+.categories-items {
+  padding-top: 1.8em;
+  display: flex;
+  justify-content: space-around;
+}
+
+.categories-item > input {
+  margin-right: 15px;
 }
 
 /* range styling */
